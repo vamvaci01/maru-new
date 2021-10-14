@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!--라이프스테이지-->
+
+ <LifeStageDef>
+    <defName>MR_HumanlikeTeenager</defName>
+    <label>teenager</label>
+    <adjective>teenage</adjective>
+    <reproductive>true</reproductive>
+    <bodySizeFactor>0.85</bodySizeFactor>
+    <healthScaleFactor>0.90</healthScaleFactor>
+    <meleeDamageFactor>0.75</meleeDamageFactor>
+    <statFactors>
+      <MoveSpeed>0.95</MoveSpeed>
+    </statFactors>
+  <caravanRideable>true</caravanRideable>
+  </LifeStageDef>
+  
+	 <LifeStageDef>
+    <defName>MR_HumanlikeAdult</defName>
+    <label>adult</label>
+    <visible>false</visible>
+    <reproductive>true</reproductive>
+  <caravanRideable>true</caravanRideable>
+  </LifeStageDef>
+
+</Defs>
