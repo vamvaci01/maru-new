@@ -37,8 +37,7 @@
   Medicine
   Social
   Intellectual
- -->
- <-- 
+  
 <AlienRace.BackstoryDef ParentName="MaruBackStory">
 		<defName></defName>
 		<title></title>
@@ -68,9 +67,8 @@
       <li>MR_Hunter</li> -모성
       <li>MR_MW</li> -중세
       <li>MR_GW</li> -번화
-      <li>MR_MHchild</li> -모성 유아기
-  -->
-<!-- 마루 배양설표 -->
+      <li>MR_SP</li> -우주
+  --><!-- 마루 배양설표 -->
 
   <!-- 유년기 -->
 
@@ -81,7 +79,7 @@
 		<defName>Maru_MH_CulturedBaby</defName>
 		<title>마루 배양설표</title>
 		<titleShort>배양설표</titleShort>
-		<baseDescription>[Pawn_nameDef]의 첫 번째 기억은 어두컴컴한 인큐베이터 속입니다. 아무것도 모르는 채로 얼어붙은 모성에 내던져진 [PAWN_pronoun]은 어떻게든 스스로 살아남는 법을 찾아냈습니다.</baseDescription>
+		<baseDescription>[PAWN_nameDef]의 첫 번째 기억은 어두컴컴한 인큐베이터 속입니다. 아무것도 모르는 채로 얼어붙은 모성에 내던져진 [PAWN_pronoun]은 어떻게든 스스로 살아남는 법을 찾아냈습니다.</baseDescription>
 		<slot>Childhood</slot>
 		<skillGains>
       <li>
@@ -117,7 +115,6 @@
 			<li>MRALL</li>
 			<li>MR_MH</li>
 			<li>MR_Child</li>
-      <li>MR_MHchild</li>
 		</spawnCategories>
 	</AlienRace.BackstoryDef>
 
@@ -126,7 +123,7 @@
     <defName>Maru_MH_Vagabond</defName>
     <title>마루 모성 방랑자</title>
     <titleShort>방랑자</titleShort>
-    <baseDescription>얼어붙은 모성, 검게 타버린 솟대들 사이에서 [PAWN_nameDef](은)는 깨어났습니다. 비록 그 전에 어떤 일이 있었는지는 하나도 떠올릴 수 없었지만, 단 한 가지, 절망적인 상황에서 낙천적으로 살아가는 방법만은 알고 있었습니다.</baseDescription>
+    <baseDescription>얼어붙은 모성, 검게 타버린 솟대들 사이에서 [PAWN_nameDef]은 깨어났습니다. 비록 그 전에 어떤 일이 있었는지는 하나도 떠올릴 수 없었지만, 단 한 가지, 절망적인 상황에서 낙천적으로 살아가는 방법만은 알고 있었습니다.</baseDescription>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -154,7 +151,6 @@
       <li>MRALL</li>
       <li>MR_MH</li>
 	  <li>MR_Child</li>
-      <li>MR_MHchild</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
 
@@ -163,7 +159,7 @@
     <defName>Maru_MH_Bookworm</defName>
     <title>마루 책벌레</title>
     <titleShort>책벌레</titleShort>
-    <baseDescription>[PAWN_nameDef](은)는 젖을 떼고 난 뒤부터 항상 종이 무더기에 파묻혀 살았습니다. 그 척박한 모성에서 피 냄새보다 종이 냄새에 익숙한 몇 안 되는 마루 중 하나입니다.</baseDescription>
+    <baseDescription>[PAWN_nameDef]은 젖을 떼고 난 뒤부터 항상 종이 무더기에 파묻혀 살았습니다. 그 척박한 모성에서 피 냄새보다 종이 냄새에 익숙한 몇 안 되는 마루 중 하나입니다.</baseDescription>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -185,7 +181,6 @@
       <li>MRALL</li>
       <li>MR_MH</li>
 	  <li>MR_Child</li>
-      <li>MR_MHchild</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
 
@@ -194,7 +189,7 @@
     <defName>Maru_MH_KeepersChild</defName>
     <title>마루 산지기의 아이</title>
     <titleShort>산지기의 아이</titleShort>
-    <baseDescription>{PAWN_nameDef}(은)는 산지기의 밑에서 자랐습니다. 비록 좋은 부모보단 좋은 선생에 가까운 사람이였지만, {PAWN_pronoun}는 {PAWN_pronoun}를 진심으로 사랑하고 존경했습니다.\n그 마음이 비뚤어진 방식으로 자라난 후에도 계속, 언제까지나.</baseDescription>
+    <baseDescription>자신의 힘을 증명하고 한 산의 주인이 된 [PAWN_nameDef]의 부모는 [PAWN_pronoun]에게 자신이 알고 있는 모든 것을 알려주었습니다. 치명상을 입지 않고 동물들을 상대하는 법, 몸을 효율적으로 사용하는 법, 심지어는 밤에 잠꼬대하지 않는 법까지 전부 말이죠.</baseDescription>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -219,9 +214,6 @@
       </li>
     </skillGains>
     <forcedTraits>
-    <li>
-    <defName>Cannibal</defName>
-    </li>
     </forcedTraits>
     <workDisables>
     </workDisables>
@@ -229,7 +221,6 @@
       <li>MRALL</li>
       <li>MR_MH</li>
 	  <li>MR_Child</li>
-      <li>MR_MHchild</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
 
@@ -238,7 +229,7 @@
     <defName>Maru_MH_LittleEngineer</defName>
     <title>마루 공학도</title>
     <titleShort>공학도</titleShort>
-    <baseDescription>[PAWN_nameDef](은)는 어렸을 때부터 유난히 기계에 많은 관심을 보였습니다. 망가진 배관들을 손톱으로 자르고 이리저리 묶어 처음으로 작동하는 무언가를 만들었을 때의 성취감은 그 후의 [PAWN_pronoun]가 선택하는 모든 일에 큰 영향을 주었습니다.</baseDescription>
+    <baseDescription>[PAWN_nameDef]은 어렸을 때부터 유난히 기계에 많은 관심을 보였습니다. 망가진 배관들을 손톱으로 자르고 이리저리 묶어 처음으로 작동하는 무언가를 만들었을 때의 성취감은 그 후의 [PAWN_pronoun]가 선택하는 모든 일에 큰 영향을 주었습니다.</baseDescription>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -262,15 +253,14 @@
       <li>MRALL</li>
       <li>MR_MH</li>
 	  <li>MR_Child</li>
-      <li>MR_MHchild</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
 
   <!-- 마루 농사꾼의 아이 -->
   <AlienRace.BackstoryDef ParentName="MaruBackStory">
     <defName>Maru_MH_FarmersChild</defName>
-    <title>마루 농사꾼의 아이</title>
-    <titleShort>농사꾼의 아이</titleShort>
+    <title>마루 공학도</title>
+    <titleShort>공학도</titleShort>
     <baseDescription>마루들의 모성에서 농사를 짓기 위해선 크게 세 가지가 필요합니다. 첫 번째는 온도가 유지되는 투명한 온실, 두 번째는 농사에 대한 기초적인 지식, 그리고 세 번째는 따뜻한 곳을 발견하고 달려드는 짐승들을 막을 수 있는 무력입니다. 공교롭게도 [PAWN_nameDef]의 부모는 그 모든 것들을 가지고 있었고, [PAWN_pronoun] 또한 자신과 같은 별종이 되길 원했습니다.</baseDescription>
     <slot>Childhood</slot>
     <skillGains>
@@ -299,7 +289,6 @@
       <li>MRALL</li>
       <li>MR_MH</li>
 	  <li>MR_Child</li>
-      <li>MR_MHchild</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
 
@@ -308,7 +297,7 @@
     <defName>Maru_MH_LittleChef</defName>
     <title>마루 꼬마 요리사</title>
     <titleShort>꼬마 요리사</titleShort>
-    <baseDescription>마루들의 사회에서 요리는 사냥을 포함합니다. 그리고 극지의 땅에서 음식을 나눌 수 있는 권한을 가진 요리사는, 무리 내에서의 영향력, 즉 권력을 상징합니다. 인간의 아이가 어릴 적에 대통령이 되는 상상을 하듯이, 이 어린 마루는 요리사를 꿈꾸며 종이 앞치마를 두르고 푸주칼을 휘둘렀습니다.</baseDescription>
+    <baseDescription>마루들의 사회에서 요리는 사냥을 포함합니다. 그리고 극지의 땅에서 음식을 나눌 수 있는 권한을 가진 요리사는, 무리 내에서의 영향력, 즉 권력을 상징합니다. 누구나 어릴 적에 대통령이 되는 상상을 하듯이, 이 어린 마루는 요리사를 꿈꾸며 종이 앞치마를 두르고 푸주칼을 휘둘렀습니다.</baseDescription>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -336,7 +325,6 @@
       <li>MRALL</li>
       <li>MR_MH</li>
 	  <li>MR_Child</li>
-      <li>MR_MHchild</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
 
@@ -345,7 +333,7 @@
     <defName>Maru_MH_SickChild</defName>
     <title>마루 병약한 아이</title>
     <titleShort>병약한 아이</titleShort>
-    <baseDescription>척박한 마루들의 모성에서는 병약하게 태어난 아이는 버려집니다. [PAWN_nameDef]의 부모 또한 다른 마루들과 별반 다를 바 없는 선택을 했고, [PAWN_pronoun]는 약한 몸으로 얼어붙은 행성에서 살아남기 위해 더욱더 영악해져야 했습니다.</baseDescription>
+    <baseDescription>척박한 마루들의 모성에서는 병약하게 태어난 아이는 버려집니다. [PAWN_nameDef]의 부모 또한 다른 마루들과 별반 다를 바 없는 선택을 했고, [PAWN_pronoun]은 약한 몸으로 얼어붙은 행성에서 살아남기 위해 더욱더 영악해져야 했습니다.</baseDescription>
     <slot>Childhood</slot>
     <skillGains>
       <li>
@@ -380,7 +368,6 @@
       <li>MRALL</li>
       <li>MR_MH</li>
 	  <li>MR_Child</li>
-      <li>MR_MHchild</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
 
@@ -417,7 +404,6 @@
       <li>MRALL</li>
       <li>MR_MH</li>
 	  <li>MR_Child</li>
-      <li>MR_MHchild</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
 
@@ -454,7 +440,6 @@
       <li>MRALL</li>
       <li>MR_MH</li>
 	  <li>MR_Child</li>
-      <li>MR_MHchild</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
 
@@ -491,7 +476,6 @@
       <li>MRALL</li>
       <li>MR_MH</li>
 	  <li>MR_Child</li>
-      <li>MR_MHchild</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
 
@@ -528,11 +512,10 @@
       <li>MRALL</li>
       <li>MR_MH</li>
 	  <li>MR_Child</li>
-      <li>MR_MHchild</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
 
-  <!-- 마루 솟대 지킴이
+  <!-- 마루 솟대 지킴이 -->
   <AlienRace.BackstoryDef ParentName="MaruBackStory">
     <defName>Maru_MH_Sotdaekeeper</defName>
     <title>마루 솟대 지킴이</title>
@@ -566,7 +549,7 @@
       <li>MR_MH</li>
 	  <li>MR_Child</li>
     </spawnCategories>
-  </AlienRace.BackstoryDef> -->
+  </AlienRace.BackstoryDef>
 
   <!-- 마루 정상배양	-->
   <AlienRace.BackstoryDef ParentName="MaruBackStory">
@@ -629,7 +612,6 @@
       <li>MRALL</li>
       <li>MR_MH</li>
 	  <li>MR_Child</li>
-      <li>MR_MHchild</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -964,10 +946,10 @@
 
 <!-- 1 -->
 <AlienRace.BackstoryDef ParentName="MaruBackStory">
-  <defName>Maru_HunterA</defName>
+  <defName>Maru_Hunter</defName>
   <title>마루 사냥꾼</title>
   <titleShort>마루 사냥꾼</titleShort>
-  <baseDescription>이 마루는 전문 사냥꾼으로서 다른 마루들에게 평소에 일정분의 식량을 받고, 근처에 위협적인 사냥감이 나타났을 때 대신 처리해주는 일을 하고 있습니다.</baseDescription>
+  <baseDescription>마루 대부분은 성장하면서 사냥에 대한 깊은 갈망을 느낍니다.\n이 마루는 전문 사냥꾼으로서 다른 마루들에게 평소에 일정분의 식량을 받고, 근처에 고래 같은 위협적인 사냥감이 나타났을 때 대신 처리해주는 일을 하고 있습니다.</baseDescription>
   <slot>Adulthood</slot>
   <skillGains>
     <li>
@@ -985,15 +967,14 @@
   </forcedHediffs>
   <spawnCategories>
     <li>MRALL</li>
-          <li>MR_Hunter</li>
 	<li>MR_Adult</li>
   </spawnCategories>
 </AlienRace.BackstoryDef>
 
   <AlienRace.BackstoryDef ParentName="MaruBackStory">
-    <defName>Maru_HunterB</defName>
-    <title>마루 사냥꾼</title>
-    <titleShort>마루 사냥꾼</titleShort>
+    <defName>Maru_mountainkeeper</defName>
+    <title>마루 산지기</title>
+    <titleShort>마루 산지기</titleShort>
     <baseDescription>일부 마루는 성장 과정에서 사냥에 대한 깊은 갈망을 느낍니다.\n이 마루는 그 경향이 특히 강했으며, 더 만족스러운 사냥감을 찾기 위해 무리를 떠나 행성 이곳저곳을 떠돌아다니고 있습니다.</baseDescription>
     <slot>Adulthood</slot>
     <skillGains>
@@ -1013,192 +994,8 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-          <li>MR_Hunter</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
-
-  <AlienRace.BackstoryDef ParentName="MaruBackStory">
-    <defName>Maru_HunterC</defName>
-    <title>마루 사냥꾼</title>
-    <titleShort>마루 사냥꾼</titleShort>
-    <baseDescription>{PAWN_nameDef}(은)는 사냥의 즐거움에 심취해 있습니다.\n덫을 설치하고, 육포를 질겅거리며 한 자리에서 몇날밤을 지새우고, 핏자국을 쫒아 사냥감을 추적하고, 힘이 다한 사냥감의 숨을 거두는 그 모든 과정이 {PAWN_pronoun}에겐 즐거움입니다.\n\n천직이라는 말이 이렇게 어올리는 마루가 또 있을까요.</baseDescription>
-    <slot>Adulthood</slot>
-    <skillGains>
-	<li>
-        <defName>Shooting</defName>
-        <amount>4</amount>
-	</li>
-	<li>
-        <defName>Melee</defName>
-        <amount>2</amount>
-    </li>
-    </skillGains>
-    <workDisables>
-    </workDisables>
-    <forcedHediffs>
-    </forcedHediffs>
-    <spawnCategories>
-      <li>MRALL</li>
-	  <li>MR_Adult</li>
-          <li>MR_Hunter</li>
-    </spawnCategories>
-  </AlienRace.BackstoryDef>
-
-  <AlienRace.BackstoryDef ParentName="MaruBackStory">
-    <defName>Maru_MountainrangerA</defName>
-    <title>마루 산지기</title>
-    <titleShort>마루 산지기</titleShort>
-    <baseDescription>깊은 산, 땅의 끝이라고도 불리는 뒤틀린 골짜기에 {PAWN_nameDef}(은)는 은거하고 있습니다. \n선조의 기술을 통해 재현하는 데에는 성공했지만 작동원리는 아직도 밝혀지지 않은 여러 장치들을 연구하기 위해, 스스로 자원한 소수의 제자들과 이 골짜기로 왔습니다. \n\n{PAWN_pronoun}의 어린아이와 같이 순수한, 동시에 강박과도 궤를 같이하는 탐구욕은 항상 다른 마루들의 앞을 비춰주는 빛이자, 그들을 이끌어주는 길이 되었습니다. \n그들이 마주할 미래가 옳은 것일지는 아무도 모릅니다. 다만, 문명 또한 자전거와 같이 앞으로 나아가지 않으면 흔들릴 뿐이란 것만은 그들 모두가 공유하는 사실입니다.</baseDescription>
-    <slot>Adulthood</slot>
-    <skillGains>
-	<li>
-        <defName>Shooting</defName>
-        <amount>4</amount>
-	</li>
-	<li>
-        <defName>Melee</defName>
-        <amount>2</amount>
-    </li>
-    </skillGains>
-    <workDisables>
-    </workDisables>
-    <forcedHediffs>
-    </forcedHediffs>
-    <forcedTraits>
-      <li>
-        <defName>MRT_MountainA</defName>
-      </li>
-    </forcedTraits>
-    <spawnCategories>
-      <li>MRALL</li>
-	  <li>MR_Adult</li>
-        <li>MR_Mountain</li>
-    </spawnCategories>
-  </AlienRace.BackstoryDef>
-
-<AlienRace.BackstoryDef ParentName="MaruBackStory">
-    <defName>Maru_MountainrangerB</defName>
-    <title>마루 산지기</title>
-    <titleShort>마루 산지기</titleShort>
-    <baseDescription>깊은 산, 흙과 생물과 기계들이 뒤섞여 풍화되는 곳에 {PAWN_nameDef}(은)는 은거하고 있습니다. \n여럿이서 움직이면 오히려 위험한 곳이기에, 맹인이 길을 짚듯 혼자 조심스럽게 유적을 조사하곤 합니다. \n\n혼자 있는 시간이 길어질수록 감정이 무뎌지는걸 느끼지만, 유적의 틈새로 들어오는 흑백이 산란하며 쪼개져 폐허의 환부를 물들이는 모습을 보고 있노라면, 두려움과 함께 알수없는 고양감－사명감이 떠오르곤 합니다.</baseDescription>
-    <slot>Adulthood</slot>
-    <skillGains>
-	<li>
-        <defName>Shooting</defName>
-        <amount>4</amount>
-	</li>
-	<li>
-        <defName>Melee</defName>
-        <amount>2</amount>
-    </li>
-    </skillGains>
-    <workDisables>
-    </workDisables>
-    <forcedHediffs>
-    </forcedHediffs>
-    <forcedTraits>
-      <li>
-        <defName>MRT_MountainB</defName>
-      </li>
-    </forcedTraits>
-    <spawnCategories>
-      <li>MRALL</li>
-	  <li>MR_Adult</li>
-        <li>MR_Mountain</li>
-    </spawnCategories>
-  </AlienRace.BackstoryDef>
-
-<AlienRace.BackstoryDef ParentName="MaruBackStory">
-    <defName>Maru_MountainrangerC</defName>
-    <title>마루 산지기</title>
-    <titleShort>마루 산지기</titleShort>
-    <baseDescription>깊은 산, 빛과 렌즈들이 서로를 교란시키며 신기루를 이루는 곳에 {PAWN_nameDef}(은)는 은거하고 있습니다.\n자신을 따르는 제자들과 함께 유적을 조사하고 기록하지만, 이 조사가 언제 끝날지, 유의미한 결과가 나올지는 이곳의 그 누구도 알지 못합니다. 다만, {PAWN_pronoun} 스스로가 이곳에 오도록 만들고, 제자를 두게 하였으며, 그들을 통해 또다시 이어져 갈 {PAWN_possessive} 생각, 의지, 신념은 이 장소에 또 하나의 거대한 유적을 만들어낼 것입니다.\n{PAWN_possessive} 제자들이 탐구하고, 받아들여야 할 과제로서 말이죠.</baseDescription>
-    <slot>Adulthood</slot>
-    <skillGains>
-	<li>
-        <defName>Shooting</defName>
-        <amount>4</amount>
-	</li>
-	<li>
-        <defName>Melee</defName>
-        <amount>2</amount>
-    </li>
-    </skillGains>
-    <workDisables>
-    </workDisables>
-    <forcedHediffs>
-    </forcedHediffs>
-    <forcedTraits>
-      <li>
-        <defName>MRT_MountainC</defName>
-      </li>
-    </forcedTraits>
-    <spawnCategories>
-      <li>MRALL</li>
-	  <li>MR_Adult</li>
-        <li>MR_Mountain</li>
-    </spawnCategories>
-  </AlienRace.BackstoryDef>
-
-<AlienRace.BackstoryDef ParentName="MaruBackStory">
-    <defName>Maru_mountainrangerD</defName>
-    <title>마루 산지기</title>
-    <titleShort>마루 산지기</titleShort>
-    <baseDescription>깊은 산, 온갖 유기물들이 흘러내리며 꿈틀거리는 곳에 {PAWN_nameDef}(은)는 은거하고 있습니다. \n인간이 상상할 수 있는 온갖 악취와 소음, 불길한 형태가 들끓는 곳에서, 오직 진실만을 쫒기위해 {PAWN_pronoun}는 스스로 마모되고 있습니다. \n{PAWN_possessive} 믿음에 대한 집착은, 스스로를 파멸시킬지언정, 결코 {PAWN_objective} 패배시키지 않을 것입니다.</baseDescription>
-    <slot>Adulthood</slot>
-    <skillGains>
-	<li>
-        <defName>Shooting</defName>
-        <amount>4</amount>
-	</li>
-	<li>
-        <defName>Melee</defName>
-        <amount>2</amount>
-    </li>
-    </skillGains>
-    <workDisables>
-    </workDisables>
-    <forcedHediffs>
-    </forcedHediffs>
-    <forcedTraits>
-      <li>
-        <defName>MRT_MountainD</defName>
-      </li>
-    </forcedTraits>
-    <spawnCategories>
-      <li>MRALL</li>
-	  <li>MR_Adult</li>
-        <li>MR_Mountain</li>
-    </spawnCategories>
-  </AlienRace.BackstoryDef>
-
-<!--
-<AlienRace.BackstoryDef ParentName="MaruBackStory">
-    <defName>Maru_HunterC</defName>
-    <title>마루 사냥꾼</title>
-    <titleShort>마루 사냥꾼</titleShort>
-    <baseDescription> </baseDescription>
-    <slot>Adulthood</slot>
-    <skillGains>
-	<li>
-        <defName>Shooting</defName>
-        <amount>4</amount>
-	</li>
-	<li>
-        <defName>Melee</defName>
-        <amount>2</amount>
-    </li>
-    </skillGains>
-    <workDisables>
-    </workDisables>
-    <forcedHediffs>
-    </forcedHediffs>
-    <spawnCategories>
-      <li>MRALL</li>
-	  <li>MR_Adult</li>
-    </spawnCategories>
-  </AlienRace.BackstoryDef>
--->
 
   <AlienRace.BackstoryDef ParentName="MaruBackStory">
     <defName>Maru_whaler</defName>
@@ -1227,7 +1024,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_MH</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
 
@@ -1254,8 +1050,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_MH</li>
-      <li>MR_Cooker</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
 
@@ -1286,8 +1080,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_MH</li>
-      <li>MR_Merchant</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
 
@@ -1314,8 +1106,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_MH</li>
-      <li>MR_Art</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -1346,8 +1136,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_MH</li>
-      <li>MR_Mech</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -1378,7 +1166,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
- <li>MR_Deshiper</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -1386,7 +1173,7 @@
     <defName>Maru_biotechnician</defName>
     <title>마루 생체 기술자</title>
     <titleShort>마루 생체 기술자</titleShort>
-    <baseDescription>[PAWN_nameDef]은 사리에서 발견한 모든 생체 관련 기술들을 정리하고, 응용하고, 개선하는 기술자입니다.\n수많은 애완 설표들을 배양해 왔으며, 그것들의 유전적 개선안도 꾸준히 제시하였고, 대부분 채택되어 오늘날의 애교를 부리는 설표가 탄생하게 되었습니다.</baseDescription>
+    <baseDescription>[PAWN_nameDef]은 사리에서 발견한 모든 생체 관련 기술들을 정리하고, 응용하고, 개선하는 기술자입니다.\n수많은 하이퍼보리아 설표들을 배양해 왔으며, 그것들의 유전적 개선안도 꾸준히 제시하였고, 대부분 채택되어 오늘날의 애교를 부리는 설표가 탄생하게 되었습니다.</baseDescription>
     <slot>Adulthood</slot>
     <skillGains>
       <li>
@@ -1409,8 +1196,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_MH</li>
-      <li>MR_Mech</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -1441,8 +1226,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_MH</li>
-      <li>MR_Mech</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -1469,8 +1252,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_MH</li>
-      <li>MR_Farm</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -1501,7 +1282,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_MH</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -1532,7 +1312,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_MW</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -1563,7 +1342,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_MW</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -1586,7 +1364,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_MW</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -1637,7 +1414,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_MW</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -1664,7 +1440,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_MW</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -1695,7 +1470,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_MW</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -1730,7 +1504,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_MW</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -1765,7 +1538,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_MW</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -1796,7 +1568,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_MW</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -1831,7 +1602,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_GW</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -1862,7 +1632,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_GW</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -1893,7 +1662,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_GW</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -1924,7 +1692,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_GW</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -1973,7 +1740,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_GW</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -2016,7 +1782,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_GW</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -2051,7 +1816,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_GW</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -2086,7 +1850,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_GW</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -2121,7 +1884,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_GW</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -2152,7 +1914,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_GW</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -2182,7 +1943,6 @@
     </forcedHediffs>
     <spawnCategories>
       <li>MRALL</li>
-      <li>MR_GW</li>
 	  <li>MR_Adult</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
@@ -2221,7 +1981,6 @@
     </forcedHediffs>
     <spawnCategories>
       <li>MRALL</li>
-      <li>MR_GW</li>
 	  <li>MR_Adult</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
@@ -2252,7 +2011,6 @@
     </forcedHediffs>
     <spawnCategories>
       <li>MRALL</li>
-      <li>MR_GW</li>
 	  <li>MR_Adult</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
@@ -2283,7 +2041,6 @@
     </forcedHediffs>
     <spawnCategories>
       <li>MRALL</li>
-      <li>MR_GW</li>
 	  <li>MR_Adult</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
@@ -2310,7 +2067,6 @@
     </forcedHediffs>
     <spawnCategories>
       <li>MRALL</li>
-      <li>MR_GW</li>
 	  <li>MR_Adult</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
@@ -2342,7 +2098,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_GW</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -2373,7 +2128,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_GW</li>
     </spawnCategories>
   </AlienRace.BackstoryDef>
   
@@ -2396,7 +2150,6 @@
     <spawnCategories>
       <li>MRALL</li>
 	  <li>MR_Adult</li>
-      <li>MR_GW</li>
     </spawnCategories>
   </AlienRace.BackstoryDef> -->
   

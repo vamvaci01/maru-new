@@ -96,8 +96,8 @@
                 <inFrontOfBody>false</inFrontOfBody>
                 <colorChannel>hair</colorChannel>
                 <drawnInBed>false</drawnInBed>
-                <defaultOffset>Tail</defaultOffset> 
-                <shaderType>Cutout</shaderType>
+                <defaultOffset>Tail</defaultOffset>
+               <shaderType>Cutout</shaderType>
                 <offsets>
                   <south>
                     <bodyTypes>
@@ -151,7 +151,7 @@
                 <colorChannel>hair</colorChannel>
                 <drawSize>1</drawSize>
                 <angle>0</angle>
-                <defaultOffset>Tail</defaultOffset> 
+                <defaultOffset>Tail</defaultOffset>
                 <shaderType>Cutout</shaderType>
                 <offsets>
                   <south>
@@ -176,7 +176,7 @@
                 <path>marulike/Ear/MRrightEar</path>
                 <bodyPart>right ear</bodyPart>
                 <inFrontOfBody>true</inFrontOfBody>
-                <colorChannel>hair</colorChannel>
+                <colorChannel>skin</colorChannel>
                 <drawSize>1</drawSize>
                 <angle>0</angle>
                 <defaultOffset>Tail</defaultOffset> 
@@ -212,9 +212,8 @@
                 <skeleton>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Thin</skeleton>
             </li>
         </graphicPaths>
-     
-	    
-<styleSettings>
+      
+        <styleSettings>
 				<li>
 					<key>HairDef</key>
 					<value>
@@ -237,7 +236,7 @@
 					</value>
 				</li>
 			</styleSettings>
-	    
+
       <relationSettings>
 
       </relationSettings>
@@ -286,12 +285,12 @@
 <!--=============================================================================================================================-->
     <statBases>
 	<!--기본-->
-      <MarketValue>2800</MarketValue>
+      <MarketValue>3000</MarketValue>
       <Flammability>0.5</Flammability>
-      <MoveSpeed>5.0</MoveSpeed>
+      <MoveSpeed>5.2</MoveSpeed>
 	  <MentalBreakThreshold>0.2</MentalBreakThreshold>
       <ComfyTemperatureMax>20</ComfyTemperatureMax>
-      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+      <ComfyTemperatureMin>-15</ComfyTemperatureMin>
 	  <ImmunityGainSpeed>1.0</ImmunityGainSpeed>
 	  <CarryingCapacity>75</CarryingCapacity>
 	  <MeatAmount>60</MeatAmount>
@@ -301,12 +300,12 @@
     <PsychicSensitivity>1.2</PsychicSensitivity>
   <!-- 전투 -->
       <MeleeDodgeChance>1.2</MeleeDodgeChance>
-      <MeleeHitChance>1.0</MeleeHitChance>
+      <MeleeHitChance>1</MeleeHitChance>
       <AimingDelayFactor>1.0</AimingDelayFactor>
-      <ShootingAccuracyPawn>1.0</ShootingAccuracyPawn>
+      <ShootingAccuracyPawn>1</ShootingAccuracyPawn>
 	<!--사교-->
 	  <NegotiationAbility>0.8</NegotiationAbility> <!--외교 영향력-->
-	  <SellPriceFactor>1</SellPriceFactor> <!--거래 가격 개선-->
+	  <SellPriceFactor>0.8</SellPriceFactor> <!--거래 가격 개선-->
 	  <SocialImpact>0.8</SocialImpact> <!--사회적 영향력-->
 	<!--제작-->
 	  <ButcheryMechanoidEfficiency>1.0</ButcheryMechanoidEfficiency> <!--메카노이드 분해 효율-->
@@ -315,12 +314,12 @@
 	  <!--<SmithingSpeed>1.0</SmithingSpeed>--> <!--제련 속도-->
 	  <GeneralLaborSpeed>1.0</GeneralLaborSpeed> <!--재단 속도-->
 	<!--조리-->
-	  <ButcheryFleshEfficiency>1.0</ButcheryFleshEfficiency> <!--도축 효율-->
-	  <ButcheryFleshSpeed>1.2</ButcheryFleshSpeed> <!--도축 속도-->
+	  <ButcheryFleshEfficiency>1.2</ButcheryFleshEfficiency> <!--도축 효율-->
+	  <ButcheryFleshSpeed>2.0</ButcheryFleshSpeed> <!--도축 속도-->
 	  <FoodPoisonChance>1.0</FoodPoisonChance> <!--식중독 확률-->
 	  <CookSpeed>1.0</CookSpeed> <!--조리 속도-->
 	<!--수면-->
-	  <RestRateMultiplier>1.2</RestRateMultiplier>
+	  <RestRateMultiplier>1.25</RestRateMultiplier>
 	<!--재배-->
 	  <PlantWorkSpeed>1.0</PlantWorkSpeed>
   <!--의학및연구-->
@@ -331,9 +330,10 @@
   <!--채굴-->
    	<MiningSpeed>1.0</MiningSpeed>
 		<MiningYield>1.0</MiningYield>
-  <!--상단속도-->
+      <!--상단속도-->
         <CaravanRidingSpeedFactor>1.3</CaravanRidingSpeedFactor>
 
+      
     </statBases>
 <!--==맨손전투===================================================================================================================-->
     <tools>
@@ -413,7 +413,6 @@
           <li>(3, 0)</li>
 				</points>
       </litterSizeCurve>
-
       <lifeStageAges>
         <li>
           <def>HumanlikeBaby</def>
@@ -432,7 +431,7 @@
           <minAge>12</minAge>
         </li>
         <li>
-          <def>MR_HumanlikeAdult/def>
+          <def>MR_HumanlikeAdult</def>
           <minAge>18</minAge>
         </li>
       </lifeStageAges>
@@ -509,29 +508,4 @@
       <li>Anesthetize</li>
     </recipes>
 </AlienRace.ThingDef_AlienRace>
-
-<!--라이프스테이지-->
-
- <LifeStageDef>
-    <defName>MR_HumanlikeTeenager</defName>
-    <label>teenager</label>
-    <adjective>teenage</adjective>
-    <reproductive>true</reproductive>
-    <bodySizeFactor>0.85</bodySizeFactor>
-    <healthScaleFactor>0.90</healthScaleFactor>
-    <meleeDamageFactor>0.75</meleeDamageFactor>
-    <statFactors>
-      <MoveSpeed>0.95</MoveSpeed>
-    </statFactors>
-  <caravanRideable>true</caravanRideable>
-  </LifeStageDef>
-  
-	 <LifeStageDef>
-    <defName>MR_HumanlikeAdult</defName>
-    <label>adult</label>
-    <visible>false</visible>
-    <reproductive>true</reproductive>
-  <caravanRideable>true</caravanRideable>
-  </LifeStageDef>
-
 </Defs>
