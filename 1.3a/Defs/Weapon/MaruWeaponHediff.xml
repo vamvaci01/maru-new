@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<HediffDef>
+<defName>MRH_Anti-Gravity</defName>
+<label>Weightless</label>
+<description>몸이 가볍습니다. 비유가 아니라, 물리적으로요.</description> <hediffClass>HediffWithComps</hediffClass>
+<defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+<makesSickThought>false</makesSickThought> 
+<scenarioCanAdd>false</scenarioCanAdd>
+<comps>
+<li Class="HediffCompProperties_Immunizable">
+<severityPerDayNotImmune>-0.5</severityPerDayNotImmune>
+</li>
+</comps>
+
+<stages>
+<li>
+<label>initial</label> 
+<becomeVisible>false</becomeVisible>
+</li>
+<li>
+<label>initial</label>
+<minSeverity>0.01</minSeverity> 
+<capMods>
+<li>
+<capacity>Moving</capacity> 
+<offset>0.1</offset>
+</li>
+</capMods>
+</li>
+
+<li>
+<label>minor</label>
+<minSeverity>0.20</minSeverity> 
+<capMods>
+<li>
+<capacity>Moving</capacity> 
+<offset>0.15</offset>
+</li>
+</capMods>
+</li>
+
+<li>
+<label>moderate</label> 
+<minSeverity>0.40</minSeverity> 
+<vomitMtbDays>5</vomitMtbDays>  
+<capMods>
+<li>
+<capacity>Moving</capacity>
+<offset>-0.25</offset>
+<setMax>0.80</setMax>
+</li>
+</capMods>
+<hediffGivers>
+<li Class="HediffGiver_Random"> 
+<hediff>MRH_Fly</hediff>
+<mtbDays>0.5</mtbDays>
+</li>
+</hediffGivers>
+</li>
+
+<li>
+<label>serious</label> 
+<minSeverity>0.60</minSeverity> 
+<vomitMtbDays>1</vomitMtbDays>
+<capMods>
+<li>
+<capacity>Moving</capacity> 
+<offset>-0.25</offset>
+<setMax>0.50</setMax>
+</li>
+</capMods>
+<hediffGivers>
+<li Class="HediffGiver_Random"> 
+<hediff>MRH_Fly</hediff>
+<mtbDays>0.1</mtbDays>
+</li>
+<li Class="HediffGiver_Random"> 
+<hediff>MRH_Blood</hediff>
+<mtbDays>1</mtbDays>
+</li>
+</hediffGivers>
+</li>
+
+<li>
+<label>extreme</label> 
+<minSeverity>0.80</minSeverity> 
+<vomitMtbDays>0.5</vomitMtbDays> 
+<capMods>
+<li>
+<capacity>Moving</capacity>
+<offset>-0.50</offset>
+<setMax>0.18</setMax>
+</li>
+</capMods>
+<hediffGivers>
+<li Class="HediffGiver_Random"> 
+<hediff>MRH_Fly</hediff>
+<mtbDays>0.1</mtbDays>
+</li>
+<li Class="HediffGiver_Random"> 
+<hediff>MRH_Blood</hediff>
+<mtbDays>0.5</mtbDays>
+</li>
+</hediffGivers>
+</li>
+
+</stages>
+</HediffDef>
+
+
+
+
+<HediffDef>
+<defName>MRH_Fly</defName>
+<hediffClass>HediffWithComps</hediffClass>
+<label>부유</label>
+<labelNoun>부유</labelNoun>
+<description>몸이 공중에 떠오릅니다.</description>
+<defaultLabelColor>(0.7,0,0.5)</defaultLabelColor>
+<scenarioCanAdd>false</scenarioCanAdd>
+<maxSeverity>1.0</maxSeverity>
+<isBad>false</isBad>
+<comps>
+<li Class="HediffCompProperties_SeverityPerDay">
+<severityPerDay>-100</severityPerDay>
+</li>
+</comps>
+<stages>
+<li>
+<minSeverity>0</minSeverity>
+<statFactors> 
+<MoveSpeed>0.01</MoveSpeed>
+</statFactors>
+</li>
+</stages>
+</HediffDef>
+
+
+
+<HediffDef>
+<defName>MRH_Blood</defName>
+<hediffClass>HediffWithComps</hediffClass>
+<label>혈액역류</label>
+<labelNoun>혈액역류</labelNoun>
+<description>피의 흐름에 이상이 생겼습니다.</description>
+<defaultLabelColor>(0.7,0,0.5)</defaultLabelColor>
+<scenarioCanAdd>false</scenarioCanAdd>
+<maxSeverity>1.0</maxSeverity>
+<isBad>True</isBad>
+<comps>
+<li Class="HediffCompProperties_SeverityPerDay">
+<severityPerDay>-10</severityPerDay>
+</li>
+</comps>
+<stages>
+<li>
+<minSeverity>0</minSeverity>
+<capMods>
+            <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+            </li>
+</capMods>
+<totalBleedFactor>1.4</totalBleedFactor>
+</li>
+</stages>
+</HediffDef>
+
+  <DamageDef Name="MR_AGBomb">
+    <defName>MR_AGBomb</defName>
+    <label>Anti-Graviti ForceField</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <isExplosive>true</isExplosive>
+    <deathMessage>{0} has died in the air.</deathMessage>
+    <hediff>Shredded</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
+    <armorCategory>Blunt</armorCategory>
+    <minDamageToFragment>1</minDamageToFragment>
+    <defaultDamage>3</defaultDamage>
+    <defaultStoppingPower>0.5</defaultStoppingPower>
+    <defaultArmorPenetration>1</defaultArmorPenetration>
+    <buildingDamageFactorImpassable>15</buildingDamageFactorImpassable>
+    <buildingDamageFactorPassable>10</buildingDamageFactorPassable>
+    <plantDamageFactor>8</plantDamageFactor>
+    <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
+    <explosionCellFleck>BlastDry</explosionCellFleck>
+    <explosionColorCenter>(0.8, 0.8, 0.9)</explosionColorCenter>
+    <explosionColorEdge>(0.6, 0.8, 1.0)</explosionColorEdge>
+    <soundExplosion>Explosion_Bomb</soundExplosion>
+    <combatLogRules>Damage_Bomb</combatLogRules>
+    <additionalHediffs>
+    <li>
+    <hediff>MRH_Anti-Gravity</hediff>
+    <severityPerDamageDealt>0.05</severityPerDamageDealt>
+    <victimSeverityScalingByInvBodySize>false</victimSeverityScalingByInvBodySize>
+    </li>
+    </additionalHediffs>
+  </DamageDef>
+
+</Defs>
