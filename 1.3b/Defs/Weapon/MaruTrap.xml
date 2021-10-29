@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="BuildingBase">
+    <defName>Trap_MRB</defName>
+    <label>설치형 덫</label>
+    <description>간단한 구조의 철제 덫입니다.\n\n동물을 사냥할 떄는 물론, 그 외의 다양한 상황에서 제 역할을 수행합니다.</description>
+    <thingClass>Building_TrapDamager</thingClass>
+    <graphicData>
+      <texPath>Things/Trap/MR_Trap_B</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+      <damageData>
+        <rect>(0,0,1,0.15)</rect>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <stealable>false</stealable>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <statBases>
+      <Mass>2.5</Mass>
+      <MaxHitPoints>15</MaxHitPoints>
+      <WorkToBuild>3200</WorkToBuild>
+      <Flammability>1</Flammability>
+      <Beauty>-20</Beauty>
+      <Cleanliness>-5</Cleanliness>
+      <TrapMeleeDamage>10</TrapMeleeDamage>
+      <TrapSpringChance>1.0</TrapSpringChance>
+    </statBases>
+	<costList>
+      <Steel>25</Steel>
+    </costList>
+    <designationCategory>Security</designationCategory>
+    <designationHotKey>Misc6</designationHotKey>
+    <building>
+      <isTrap>true</isTrap>
+      <trapDestroyOnSpring>true</trapDestroyOnSpring>
+      <trapDamageCategory>Sharp</trapDamageCategory>
+      <expandHomeArea>false</expandHomeArea>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+    <placeWorkers>
+      <li>PlaceWorker_NeverAdjacentTrap</li>
+    </placeWorkers>
+  </ThingDef>
+  
+<ThingDef Name="TrapMRBase" ParentName="BuildingBase" Abstract="True">
+    <thingClass>Building_TrapExplosive</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <rect>(0,0,1,0.15)</rect>
+      </damageData>
+    </graphicData>
+    <uiIconOffset>(0,-0.14)</uiIconOffset>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
+    <rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <stealable>false</stealable>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <statBases>
+      <Mass>2</Mass>
+      <MaxHitPoints>40</MaxHitPoints>
+      <WorkToBuild>1400</WorkToBuild>
+      <Flammability>1</Flammability>
+      <Beauty>-4</Beauty>
+      <TrapSpringChance>1.0</TrapSpringChance>
+    </statBases>
+    <building>
+      <isTrap>true</isTrap>
+      <trapPeacefulWildAnimalsSpringChanceFactor>0.8</trapPeacefulWildAnimalsSpringChanceFactor>
+      <expandHomeArea>false</expandHomeArea>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>IEDs</li>
+    </researchPrerequisites>
+    <placeWorkers>
+      <li>PlaceWorker_NeverAdjacentTrap</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="TrapMRBase">
+    <defName>Trap_MR</defName>
+     <label>설치형 덫</label>
+    <description>간단한 구조의 철제 덫입니다.\n\n스프링만 다시 당겨놓는다면 언제든지 재사용이 가능합니다.</description>
+      <graphicData>
+      <texPath>Things/Trap/MR_Trap_B</texPath>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <costList>
+      <Shell_HighExplosive>2</Shell_HighExplosive>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>0.9</explosiveRadius>
+        <explosiveDamageType>MR_Trap_b</explosiveDamageType>
+        <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+        <wickTicks>1</wickTicks>
+        <startWickOnDamageTaken>
+          <li>Bullet</li>	
+          <li>Arrow</li>
+          <li>ArrowHighVelocity</li>
+        </startWickOnDamageTaken>
+      </li>
+    </comps>
+    <specialDisplayRadius>3.9</specialDisplayRadius>
+  </ThingDef>
+  
+ <DamageDef Name="MR_Trap_b">
+    <defName>MR_Trap_b</defName>
+    <label>BearTrap</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <isExplosive>true</isExplosive>
+    <deathMessage>{0} has died in the Trap.</deathMessage>
+    <hediff>Cut</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <minDamageToFragment>1</minDamageToFragment>
+    <defaultDamage>3</defaultDamage>
+    <defaultStoppingPower>0.5</defaultStoppingPower>
+    <defaultArmorPenetration>1</defaultArmorPenetration>
+    <buildingDamageFactorImpassable>15</buildingDamageFactorImpassable>
+    <buildingDamageFactorPassable>10</buildingDamageFactorPassable>
+    <plantDamageFactor>8</plantDamageFactor>
+    <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
+	<explosionCellMote>Mote_Pulse</explosionCellMote>
+    <explosionColorCenter>(0.8, 0.8, 0.9)</explosionColorCenter>
+    <explosionColorEdge>(1, 1, 1)</explosionColorEdge>
+    <soundExplosion>MarubowSE_W</soundExplosion>
+  </DamageDef>
+
+
+	
+	<ThingDef ParentName="ApparelBase"><!-- 덫 -->
+		<defName>MR_Apparel_Trap</defName>
+		<label>Beartrap</label>
+		<description>Test</description>
+		<descriptionHyperlinks>
+			<ThingDef>Trap_MR</ThingDef>
+		</descriptionHyperlinks>
+		<techLevel>Spacer</techLevel>
+		<comps>
+			<li Class="CompProperties_Reloadable">
+				<maxCharges>3</maxCharges>
+				<ammoDef>Steel</ammoDef>
+				<ammoCountToRefill>15</ammoCountToRefill>
+				<baseReloadTicks>60</baseReloadTicks>
+				<soundReload>Standard_Reload</soundReload>
+				<hotKey>Misc4</hotKey>
+				<chargeNoun>Spare trap</chargeNoun>
+				<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+			</li>
+		</comps>
+			<verbs>
+				<li>
+					<verbClass>Verb_Spawn</verbClass>
+					<label>Set Up Bear Trap</label>
+					<hasStandardCommand>true</hasStandardCommand>
+					<spawnDef>Trap_MR</spawnDef>
+					<warmupTime>1.2</warmupTime>
+					<range>1.9</range>
+					<burstShotCount>1</burstShotCount>
+					<soundAiming>AimingmarubowSE_M</soundAiming>
+					<targetParams>
+						<canTargetLocations>true</canTargetLocations>
+					</targetParams>
+					<consumeFuelPerShot>1</consumeFuelPerShot>
+					<targetable>true</targetable>
+					<nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+					<onlyManualCast>true</onlyManualCast>
+				</li>
+			</verbs>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
+			<researchPrerequisite></researchPrerequisite>
+			<recipeUsers>
+				<li>MR_retrofittable</li>
+			</recipeUsers>
+			<useIngredientsForColor>false</useIngredientsForColor>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<ComponentSpacer>2</ComponentSpacer>
+		</costList>
+		<graphicData>
+			<texPath>Things/Trap/MR_Trap_W</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+			<statBases>
+				<WorkToMake>2200</WorkToMake>
+				<Mass>3</Mass>
+				<Flammability>0.4</Flammability>
+				<EquipDelay>2</EquipDelay>
+				<AccuracyTouch>1</AccuracyTouch>
+				<AccuracyShort>1</AccuracyShort>
+				<AccuracyMedium>1</AccuracyMedium>
+				<AccuracyLong>1</AccuracyLong>
+			</statBases>
+				<thingCategories>
+					<li>MRApparel</li>
+				</thingCategories>
+			<generateAllowChance>0</generateAllowChance>
+		<apparel>
+			<wornGraphicPath>Things/Inv/MR_Invisible</wornGraphicPath>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<careIfDamaged>false</careIfDamaged>
+			<wearPerDay>0</wearPerDay>
+			<bodyPartGroups>
+				<li>Waist</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Belt</li>
+			</layers>
+		</apparel>
+	</ThingDef>
+	
+	
+</Defs>
