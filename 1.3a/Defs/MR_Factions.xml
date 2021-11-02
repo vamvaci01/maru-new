@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FactionDef Abstract="True" Name="MR_PlayerFactionBase">
+		<settlementTexturePath>Icon/MR_Icon</settlementTexturePath>
+		<colorSpectrum>
+		  <li>(1, 1, 1)</li>
+		</colorSpectrum>
+		<raidLootValueFromPointsCurve>
+			<points>
+			  <li>(35,     15)</li>
+			  <li>(100,   120)</li>
+			  <li>(1000,  500)</li>
+			  <li>(2000,  800)</li>
+			  <li>(4000, 1000)</li>
+			</points>
+		  </raidLootValueFromPointsCurve>
+	</FactionDef>
+	
+  <!-- 마루 플레이어 -->
+	<FactionDef ParentName="MR_PlayerFactionBase">
+		<defName>Maru_PlayerFaction</defName>
+		<label>New Clan</label>
+		<description>Your maru settlement.</description>
+		<isPlayer>true</isPlayer>
+		<basicMemberKind>Maru_Colonist</basicMemberKind>
+		<pawnSingular>Maru</pawnSingular>
+		<pawnsPlural>Snowleopards</pawnsPlural>
+		<techLevel>Industrial</techLevel>
+		<backstoryCategories>
+			<li>Offworld</li>
+		</backstoryCategories>
+		<allowedCultures>
+			<li>MaruCulture</li>
+		</allowedCultures>
+		<factionIconPath>Icon/MR_Icon</factionIconPath>
+		<settlementTexturePath>Icon/MR_HomeIcon</settlementTexturePath>
+		<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+		<geneticVariance>1</geneticVariance>
+		<startingResearchTags>
+			<li>ClassicStart</li>
+		</startingResearchTags>
+		<apparelStuffFilter>
+			<thingDefs>
+				<li>Cloth</li>
+			</thingDefs>
+		</apparelStuffFilter>
+	</FactionDef>
+  
+  <!-- MaruNPC -->
+
+	<FactionDef ParentName="FactionBase" Name="MaruFactionBase" Abstract="True">
+		<pawnSingular>Maru</pawnSingular>
+		<pawnsPlural>Snowleopards</pawnsPlural>
+		<listOrderPriority>40</listOrderPriority>
+		<settlementGenerationWeight>1</settlementGenerationWeight>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<canMakeRandomly>true</canMakeRandomly>
+		<canSiege>true</canSiege>
+		<canStageAttacks>true</canStageAttacks>
+		<humanlikeFaction>true</humanlikeFaction>
+		<canUseAvoidGrid>true</canUseAvoidGrid>
+		<leaderTitle>Head</leaderTitle>
+		<factionIconPath>Icon/MR_Icon</factionIconPath>
+		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+		<raidLootMaker>MaruRaidLootMaker</raidLootMaker>
+
+		<requiredMemes> <!--필수로 들어가는 meme지정-->
+			<li MayRequire="Ludeon.RimWorld.Ideology">Individualist</li>
+		</requiredMemes>
+		<disallowedMemes> <!--포함시키지 않는 meme지정-->
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">FleshPurity</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">MaleSupremacy</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">FemaleSupremacy</li>
+		</disallowedMemes>
+		<structureMemeWeights>    <!--기반이념(종교같은 큰틀)의 비율-->
+			<Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
+		</structureMemeWeights>
+		
+		<caravanTraderKinds>
+			<li>Caravan_Outlander_BulkGoods</li>
+			<li>Caravan_Outlander_CombatSupplier</li>
+			<li>Caravan_Outlander_Exotic</li>
+			<li>Caravan_Outlander_PirateMerchant</li>
+		</caravanTraderKinds>
+		<visitorTraderKinds>
+			<li>Visitor_Outlander_Standard</li>
+		</visitorTraderKinds>
+		<baseTraderKinds>
+			<li>Base_Outlander_Standard</li>
+		</baseTraderKinds>
+		
+		<techLevel>Spacer</techLevel>
+		<backstoryCategories>
+			<li>Offworld</li>
+		</backstoryCategories>
+		<allowedCultures>
+			<li>MaruCulture</li>
+		</allowedCultures>
+		<geneticVariance>0.7</geneticVariance>
+		<maxPawnCostPerTotalPointsCurve>
+			<points>
+				<li>(0,35)</li>
+				<li>(70, 50)</li>
+				<li>(700, 100)</li>
+				<li>(1300, 150)</li>
+				<li>(100000, 10000)</li>
+			</points>
+		</maxPawnCostPerTotalPointsCurve>
+		<raidLootValueFromPointsCurve>
+			<points>
+			  <li>(35,     15)</li>
+			  <li>(100,   120)</li>
+			  <li>(1000,  500)</li>
+			  <li>(2000,  800)</li>
+			  <li>(4000, 1000)</li>
+			</points>
+		</raidLootValueFromPointsCurve>
+		<raidCommonalityFromPointsCurve>
+			<points>
+				<li>(10,  1)</li>
+				<li>(700,  1)</li>
+				<li>(1400, 1.5)</li>
+				<li>(2800, 2.1)</li>
+				<li>(4000, 2.2)</li>
+				<li>(5000, 2.4)</li>
+				<li>(6000, 2.6)</li>
+			</points>
+		</raidCommonalityFromPointsCurve>
+		<pawnGroupMakers>
+			<!-- 공격군 일반 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>80</commonality>
+			<maxTotalPoints>2500</maxTotalPoints>
+			<disallowedStrategies>
+				<li>ImmediateAttackSappers</li>
+				<li>Siege</li>
+			</disallowedStrategies>
+			<options>
+				<MRP_Engineer>15</MRP_Engineer>
+                <MRP_Work>8</MRP_Work>
+                <MRP_Doctor>5</MRP_Doctor>
+                <MRP_Hunter>2</MRP_Hunter>
+                <MRP_Caravan>1</MRP_Caravan>
+			</options> 
+		</li>
+		
+			<!-- 공격군 정규 -->
+		
+                        <li> 
+			<kindDef>Combat</kindDef>
+			<commonality>15</commonality>
+			<maxTotalPoints>5000</maxTotalPoints>
+			<disallowedStrategies>
+				<li>ImmediateAttackSappers</li>
+				<li>Siege</li>
+			</disallowedStrategies>
+			<options>
+				<MRP_fangs_M>7</MRP_fangs_M>
+				<MRP_fangs_R>3</MRP_fangs_R>
+			</options> 
+		</li>
+	        <!-- 공격군 정규 조직화 -->
+			<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>15</commonality>
+			<maxTotalPoints>8500</maxTotalPoints>
+			<disallowedStrategies>
+				<li>ImmediateAttackSappers</li>
+				<li>Siege</li>
+			</disallowedStrategies>
+			<options>
+				<MRP_fangs_M>7</MRP_fangs_M>
+				<MRP_fangs_R>4</MRP_fangs_R>
+				<MRP_Claws_A>1</MRP_Claws_A>
+			</options> 
+	      	</li>
+			 
+		    <!-- 공격군 산지기 결정-->
+			<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>15</commonality>
+			<disallowedStrategies>
+				<li>ImmediateAttackSappers</li>
+				<li>Siege</li>
+			</disallowedStrategies>
+			<options>
+				<MRP_fangs_M>10</MRP_fangs_M>
+				<MRP_fangs_R>3</MRP_fangs_R>
+				<MRP_Claws_C>3</MRP_Claws_C>
+				<MRP_MountainRanger>1</MRP_MountainRanger>
+			</options> 
+		    </li>
+			
+			<!-- 공격군 산지기 둔화-->
+			<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>15</commonality>
+			<disallowedStrategies>
+				<li>ImmediateAttackSappers</li>
+				<li>Siege</li>
+			</disallowedStrategies>
+			<options>
+				<MRP_fangs_M>10</MRP_fangs_M>
+				<MRP_fangs_R>7</MRP_fangs_R>
+				<MRP_Claws_A>3</MRP_Claws_A>
+				<MRP_MountainRanger>1</MRP_MountainRanger>
+			</options> 
+		    </li>
+			
+			<!-- 방어군 -->
+
+		<li>
+			<kindDef>Settlement</kindDef>
+			<maxTotalPoints>5500</maxTotalPoints>
+			<options>
+				<MRP_Deciphers>5</MRP_Deciphers>
+				<MRP_Hunter>10</MRP_Hunter>
+			</options>
+		</li>
+
+		<li>
+			<kindDef>Settlement</kindDef>
+			<options>
+				<MRP_fangs_M>10</MRP_fangs_M>
+				<MRP_fangs_R>10</MRP_fangs_R>
+				<MRP_Claws_C>3</MRP_Claws_C>
+				<MRP_Claws_A>3</MRP_Claws_A>
+				<MRP_MountainRanger>1</MRP_MountainRanger>
+			</options>
+		</li>
+		
+		<li>
+			<kindDef>Peaceful</kindDef>
+			<options>
+				<MRP_Engineer>15</MRP_Engineer>
+                <MRP_Work>8</MRP_Work>
+                <MRP_Doctor>5</MRP_Doctor>
+                <MRP_Hunter>20</MRP_Hunter>
+                <MRP_Caravan>15</MRP_Caravan>
+                <MRP_Deciphers>5</MRP_Deciphers>
+			</options>
+		</li>
+	  
+		<li>
+        <kindDef>Trader</kindDef>
+			<traders>
+				<MRP_Caravan>1</MRP_Caravan>
+			</traders>
+			<carriers>
+				<Muffalo>1</Muffalo>
+			</carriers>
+			<guards>
+				<MRP_Hunter>15</MRP_Hunter>
+				<MRP_Engineer>3</MRP_Engineer>
+                                                <MRP_Doctor>3</MRP_Doctor>
+			</guards>
+		</li>
+		</pawnGroupMakers>
+		<settlementTexturePath>Icon/MR_Icon</settlementTexturePath>
+		<allowedArrivalTemperatureRange>-60~40</allowedArrivalTemperatureRange>
+		<maxConfigurableAtWorldCreation>3</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>15</configurationListOrderPriority>
+	</FactionDef>
+  
+  
+	<FactionDef ParentName="MaruFactionBase">
+		<defName>MRF_Hyperborea</defName>
+		<label>Maru-Upper Mountain</label>
+		<autoFlee>false</autoFlee>
+		<hostileToFactionlessHumanlikes>false</hostileToFactionlessHumanlikes>
+		<description>마루들의 정착지입니다. 해석가들을 중심으로 하는, 필요에 의한 집단입니다.</description>
+		<colorSpectrum>
+		  <li>(1, 1, 1)</li>
+		  <li>(1, 1, 1)</li>
+		</colorSpectrum>
+		<naturalEnemy>false</naturalEnemy>
+	</FactionDef>
+
+	<ThingSetMakerDef>
+		<defName>MaruRaidLootMaker</defName>
+			<root Class="ThingSetMaker_MarketValue">
+				<fixedParams>
+					<filter>
+						<thingDefs>
+							<li>Silver</li>
+							<li>MedicineIndustrial</li>
+							<li>MR_Sarira</li>
+						</thingDefs>
+					</filter>
+				</fixedParams>
+			</root>
+	</ThingSetMakerDef>
+
+	<CultureDef>
+		<defName>MaruCulture</defName>
+		<label>Snowleopard of hyperborea</label>
+		<description>TEST</description>
+		<ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoAstropolitan</ideoNameMaker>
+		<deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityAstropolitan</deityNameMaker>
+		<deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerAstropolitan</deityTypeMaker>
+		<leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">LeaderTitleMaker_Astropolitan</leaderTitleMaker>
+		<festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalAstropolitan</festivalNameMaker>
+		<allowedPlaceTags>
+			<li>OriginSpacer</li>
+		</allowedPlaceTags>
+		<iconPath>Icon/MR_Icon</iconPath>
+		<iconColor>(1.0, 1.0, 1.0)</iconColor>
+		<thingStyleCategories>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<category>Rustic</category>
+				<priority>2</priority>
+			</li>
+		</thingStyleCategories>
+		<styleItemTags>
+			<li>
+				<tag>Urban</tag>
+				<baseWeight>1</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+			<li>
+				<tag>Rural</tag>
+				<baseWeight>1</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+			<li>
+				<tag>MRhair</tag>
+				<baseWeight>0</baseWeight>
+				<weightFactor>0</weightFactor>
+			</li>
+			<li>
+				<tag>NoBeard</tag>
+				<baseWeight>1</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+			<li>
+				<tag>TattooFaceTribal</tag>
+				<baseWeight>0.4</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+			<li>
+				<tag>TattooBodyTribal</tag>
+				<baseWeight>0.4</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+			<li>
+				<tag>NoTattoo</tag>
+				<baseWeight>1</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+		</styleItemTags>
+	</CultureDef>
+ 
+</Defs>

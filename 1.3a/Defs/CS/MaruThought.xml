@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<ThoughtDef>
+  <defName>Maru_OverPopulation</defName>
+  <workerClass>MaruThought.ThoughtWorker_OverPopulation_Maru</workerClass>
+  <stages>
+    <li>
+      <!--5명 이하-->
+      <label>고요함</label>
+      <description>바람소리, 발소리, 땅울림, 모든게 느껴져. 기분 좋은 정적이야.</description>
+      <baseMoodEffect>2</baseMoodEffect>
+    </li>
+    <li>
+      <!--10명 이하-->
+      <label>쾌적함</label>
+      <description></description>
+      <baseMoodEffect>0</baseMoodEffect>
+    </li>
+    <li>
+      <!--20명 이하-->
+      <label>혼잡함</label>
+      <description>수많은 냄새가 흘러들어오고 있어. 이곳에 사람이 필요한 건 알지만, 어지러워.</description>
+      <baseMoodEffect>-2</baseMoodEffect>
+    </li>
+    <li>
+      <!--30명 이하-->
+      <label>숨막힘</label>
+      <description>좋은 생각은 아닌 것 같아.</description>
+      <baseMoodEffect>-4</baseMoodEffect>
+    </li>
+    <li>
+      <!--30명 이상-->
+      <label>경계중</label>
+      <description>사람이 사람을 믿는 데에는, 거리가 필요할 거야.</description>
+      <baseMoodEffect>-6</baseMoodEffect>
+    </li>
+  </stages>
+</ThoughtDef>
+</Defs>
